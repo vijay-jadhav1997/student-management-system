@@ -5,8 +5,8 @@ import { AuthTokensInterface } from "../types/auth.interface"
 export const baseCookieOptions: CookieOptions = {
   httpOnly: true,
   secure: config.nodeEnv !== "development",
-  sameSite: config.nodeEnv === 'development' ? 'lax' : 'strict',
-  domain: config.domain,
+  sameSite: config.nodeEnv === 'development' ? 'lax' : 'none',
+  // domain: config.domain,
 }
 
 export const setCookies = (res:Response, tokens: AuthTokensInterface) => {
