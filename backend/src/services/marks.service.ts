@@ -58,3 +58,7 @@ export const deleteMarks=  async(id: string) => {
   await MarksModel.deleteOne({_id: id})
   return 
 }
+
+export const getMarks=  async(id: string) => {
+  return await MarksModel.findById({_id: id})
+}
